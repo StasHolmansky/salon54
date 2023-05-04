@@ -1,0 +1,47 @@
+@import "./vars.scss";
+
+#section_gallery {
+    background-image: url(../img/palm.webp);
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-size: contain;
+}
+
+.section__content_gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .section__content-img {
+        width: 240px;
+        height: 240px;
+        margin: 6px;
+        box-shadow: 8px 8px 16px rgba($shadow, 0.25);
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: scale(1.3, 1.3);
+        }
+    }
+}
+
+@media ($mediaMD) {
+    .section__content_gallery {
+        display: block;
+        width: 100%;
+
+        .section__content-img {
+            padding: 20px;
+            width: 100%;
+            height: auto;
+
+            &._hidden {
+                display: none;
+            }
+
+            &:hover {
+                transform: none;
+            }
+        }
+    }
+}

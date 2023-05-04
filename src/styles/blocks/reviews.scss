@@ -1,0 +1,101 @@
+@import "./vars.scss";
+@import "./mixins.scss";
+
+#section_reviews {
+    background: $backgroundColor;
+    @include adaptiv-bgColorTopLeft(300, 100);
+    @include adaptiv-bgColorBottomRight(300, 100);
+}
+
+.section__content_reviews {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.reviews-item {
+    margin: 10px 6px;
+    padding: 24px;
+    max-width: 450px;
+    min-width: 250px;
+    width: 100%;
+    background-color: $reviewsBgColor;
+    box-shadow: 8px 8px 16px rgba($shadow, 0.25);
+    border-radius: 30px;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: scale(1.1, 1.1);
+    }
+
+    &._hidden {
+        display: none;
+    }
+
+    .reviews-item__wrapper {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .reviews-item__header {
+        display: flex;
+        align-items: center;
+
+        .reviews-item__img {
+            padding: 5px;
+            border-radius: 50%;
+        }
+
+        .reviews-item__title {
+            font-weight: 400;
+        }
+    }
+    .reviews-item__text {
+        margin-top: 10px;
+        border: 2px solid $mainColor;
+        border-radius: 30px;
+        padding: 10px;
+    }
+    .reviews-item__data {
+        margin-top: 10px;
+        align-self: flex-end;
+        font-style: italic;
+    }
+}
+
+.section__footer {
+    margin: 30px 5px;
+    width: 100%;
+    text-align: center;
+}
+
+#reviews__link {
+    width: 80%;
+    height: 38px;
+    padding: 10px;
+    background-color: $mainColor;
+    border: 1px solid $mainColor;
+    border-radius: 50px;
+    font-family: "Arial";
+    font-weight: 700;
+    text-align: center;
+    color: $white;
+    margin: 5px 0;
+
+    &:hover {
+        color: $mainColor;
+        background-color: $white;
+        color: $mainColor;
+    }
+}
+
+@media ($mediaMD) {
+    #section_reviews {
+        border-radius: 0px 100px;
+
+        .reviews-item:hover {
+            transform: none;
+        }
+    }
+}

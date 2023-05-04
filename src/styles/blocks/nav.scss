@@ -1,0 +1,212 @@
+@import "./vars.scss";
+
+.header {
+    &__nav {
+        z-index: 3;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        justify-content: center;
+        background-color: rgba($backgroundColorWhite, 0.4);
+        transition: color 0.5s ease;
+
+        &._scroll {
+            background-color: $backgroundColor;
+        }
+    }
+
+    &__wrapper {
+        max-width: $maxWindowWidth;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {
+        width: 80px;
+        height: 70px;
+        padding: 5px 10px;
+        z-index: 3;
+
+        & img {
+            width: 100%;
+            border-radius: 50%;
+        }
+    }
+
+    &__menu {
+        width: 70%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__burger {
+        display: none;
+    }
+
+    &__items {
+        width: 100%;
+        padding-inline-start: 0;
+        display: flex;
+        justify-content: space-around;
+        gap: 30px;
+    }
+
+    &__item {
+        position: relative;
+
+        a {
+            padding: 10px 0;
+            transition: all 0.5s ease;
+
+            &._active {
+                color: $mainColor;
+
+                &::after {
+                    content: "";
+                    display: block;
+                    background: $mainColor;
+                    height: 2px;
+                    width: 100%;
+                    position: absolute;
+                    bottom: -3px;
+                    left: 0;
+                    transition: all 0.5s ease;
+                }
+            }
+
+            &::after {
+                content: "";
+                display: block;
+                background: $mainColor;
+                height: 2px;
+                width: 0;
+                position: absolute;
+                bottom: -3px;
+                left: 0;
+                transition: all 0.5s ease;
+            }
+
+            &:hover {
+                color: $mainColor;
+
+                &::after {
+                    width: 100%;
+                    background: $mainColor;
+                }
+            }
+        }
+    }
+}
+
+@media ($mediaLG) {
+    .header {
+        &__nav._active {
+            background-color: $backgroundColor;
+        }
+
+        &__burger {
+            display: block;
+            width: 70px;
+            height: 70px;
+            position: relative;
+            padding: 10px;
+            & span,
+            &::before,
+            &::after {
+                width: 50px;
+                height: 5px;
+                background-color: $black;
+                position: absolute;
+                transition: all 0.3s ease;
+            }
+
+            & span {
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            &::before,
+            &::after {
+                content: "";
+            }
+
+            &::before {
+                top: 15px;
+            }
+
+            &::after {
+                bottom: 15px;
+            }
+
+            &._active span {
+                display: none;
+            }
+
+            &._active::before {
+                transform: rotate(45deg) translateY(-50%);
+                top: 50%;
+            }
+
+            &._active::after {
+                bottom: 50%;
+                transform: rotate(-45deg) translateY(100%);
+            }
+        }
+
+        &__menu._active {
+            left: 0;
+
+            &::before {
+                content: "";
+                position: fixed;
+                width: 100%;
+                top: 0;
+                left: 0;
+                height: 70px;
+                background-color: $backgroundColor;
+                z-index: 1;
+            }
+        }
+
+        &__menu {
+            display: block;
+            overflow: auto;
+            width: 100%;
+            height: 100%;
+            background-color: $backgroundColor;
+            @include adaptiv-bgColorBottomHeader(200, 100);
+            position: fixed;
+            top: 0;
+            left: -100%;
+            justify-content: flex-start;
+            align-items: flex-start;
+            transition: all 0.3s ease;
+        }
+        &__items {
+            margin: 70px 0;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+        &__item {
+            width: 200px;
+            text-align: center;
+
+            a {
+                display: block;
+                width: 100%;
+                font-size: 24px;
+
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+}

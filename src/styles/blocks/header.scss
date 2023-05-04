@@ -1,0 +1,122 @@
+@import "./vars.scss";
+
+.header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    @include adaptiv-bgColorBottomHeader(200, 100);
+    background-color: $backgroundColor;
+    width: 100%;
+    height: 100vh;
+
+    &__image {
+        width: 50%;
+        height: 100%;
+        background-image: url(../img/bg.webp);
+        background-repeat: no-repeat;
+        background-size: auto 95%;
+        background-position-x: right;
+        background-position-y: center;
+    }
+
+    &__title {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    &__send {
+        min-width: 200px;
+        margin-top: 20px;
+        border: 1px solid $mainColor;
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        @include adaptiv-btn(270, 110);
+        height: 35px;
+        position: relative;
+        transition: all 0.3s ease;
+
+        svg {
+            position: absolute;
+            top: 2px;
+            left: 5px;
+            width: 30px;
+            height: 30px;
+            fill: $white;
+        }
+
+        span {
+            width: 100%;
+            text-align: center;
+            color: $mainColor;
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+            .header__send__link {
+                color: $mainColor;
+            }
+        }
+
+        &:hover {
+            span {
+                color: $headerTextSendActive;
+                z-index: 2;
+
+                .header__send__link {
+                    color: $white;
+                }
+            }
+
+            .header__sending {
+                width: 100%;
+            }
+
+            svg {
+                transition: all 0.5s ease;
+                transform: rotate(360deg);
+            }
+        }
+    }
+
+    &__sending {
+        width: 45px;
+        height: 34px;
+        background: $mainColor;
+        border: 1px solid $mainColor;
+        border-radius: 50px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateY(-2%);
+        transition: all 0.3s ease;
+    }
+}
+
+@media ($mediaMD) {
+    .header {
+        border-radius: 0px 0px 100px 0px;
+
+        &__image {
+            width: 0;
+            height: 0;
+        }
+        &__title {
+            width: 100%;
+            align-items: center;
+
+            h1 {
+                font-size: 100px;
+            }
+
+            .header__text {
+                font-size: 40px;
+            }
+        }
+        &__send {
+            width: 100%;
+            max-width: 200px;
+        }
+    }
+}

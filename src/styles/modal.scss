@@ -1,0 +1,101 @@
+@import "./vars.scss";
+
+.modal-overlay {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($black, $alpha: 0.5);
+    transition: all 0.3s ease 0s;
+
+    &._active {
+        top: 0;
+    }
+}
+
+.modal {
+    overflow: auto;
+    position: fixed;
+    top: -100%;
+    left: 50%;
+    z-index: 5;
+    padding: 24px;
+    max-width: 400px;
+    width: 80%;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: $backgroundColorWhite;
+    box-shadow: 8px 8px 16px rgba($black, 0.25);
+    border-radius: 30px;
+    transition: all 0.8s ease 0s;
+    transform: perspective(150px) translateY(-50%) translateX(-50%)
+        rotateX(45deg);
+
+    &._active {
+        top: 50%;
+        transform: perspective(400px) translateY(-50%) translateX(-50%)
+            rotateX(0deg);
+    }
+
+    &__close {
+        font-size: 30px;
+        align-self: end;
+        padding: 10px;
+        cursor: pointer;
+        transition: all 0.5s ease;
+
+        &:hover {
+            transform: rotate(360deg);
+        }
+    }
+
+    &__title {
+        align-self: center;
+    }
+
+    &__text {
+        margin-top: 10px;
+    }
+
+    &__form {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__name,
+    &__phone {
+        width: 100%;
+        height: 38px;
+        margin-top: 20px;
+        border: 1px solid $mainColor;
+        border-radius: 50px;
+        text-align: center;
+    }
+
+    &__btn {
+        width: 100%;
+        max-width: 200px;
+        height: 38px;
+        margin-top: 20px;
+        background-color: $mainColor;
+        border: 1px solid #75492b;
+        font-size: 15px;
+        border-radius: 50px;
+        font-family: "Arial";
+        font-weight: 700;
+        text-align: center;
+        text-transform: uppercase;
+        color: $white;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $white;
+            color: $mainColor;
+        }
+    }
+}

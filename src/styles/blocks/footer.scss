@@ -1,0 +1,120 @@
+@import "./vars.scss";
+
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    &__items {
+        max-width: 1440px;
+        width: 100%;
+        padding: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__item {
+        min-width: 200px;
+        max-width: 300px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: "Montserrat";
+        line-height: 26px;
+
+        &-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+        }
+
+        &-list {
+            padding: 0;
+            display: flex;
+            gap: 10px;
+        }
+    }
+
+    &__title {
+        font-weight: 800;
+        line-height: 24px;
+        text-align: center;
+        text-transform: capitalize;
+        color: $mainColor;
+        margin: 10px 0;
+    }
+
+    &__social {
+        width: 100%;
+        margin: 10px 0;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    &__item-icon {
+        padding: 5px;
+        width: 50px;
+        height: 50px;
+        fill: $mainColor;
+
+        &:hover {
+            fill: $svgActive;
+        }
+    }
+
+    &__contacts {
+        padding: 0;
+        margin: 0;
+
+        .footer__contacts-link {
+            color: $mainColor;
+            display: flex;
+            align-items: center;
+            padding: 5px;
+
+            &:hover {
+                color: $svgActive;
+
+                .footer__contacts-svg {
+                    fill: $svgActive;
+                }
+            }
+        }
+
+        .footer__contacts-svg {
+            fill: $mainColor;
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    @media ($mediaLG) {
+        .footer__items {
+            justify-content: center;
+        }
+    }
+
+    @media ($mediaMD) {
+        .footer__items {
+            flex-direction: column;
+            align-items: center;
+
+            .footer__social {
+                order: 1;
+            }
+
+            .footer__second {
+                order: 2;
+            }
+
+            .footer__third {
+                order: 3;
+            }
+
+            .footer__fourth {
+                order: 4;
+            }
+        }
+    }
+}

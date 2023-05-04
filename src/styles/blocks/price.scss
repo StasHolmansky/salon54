@@ -1,0 +1,112 @@
+@import "./vars.scss";
+@import "./mixins.scss";
+
+#section_price {
+    background: $backgroundColor;
+    @include adaptiv-bgColorTop(300, 100);
+    @include adaptiv-bgColorBottom(300, 100);
+}
+
+.section__content_price {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.price-item {
+    margin: 10px 6px;
+    padding: 24px;
+    width: 100%;
+    max-width: 450px;
+    min-width: 285px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: $backgroundColorWhite;
+    box-shadow: 8px 8px 16px rgba($shadow, 0.25);
+    border-radius: 30px;
+    transform: scale(0);
+    transition: transform 0.3s ease;
+
+    &._active {
+        transform: scale(1);
+
+        &:hover {
+            transform: scale(1.1);
+            z-index: 2;
+        }
+    }
+
+    .price-item__lists {
+        margin: 24px 0 0 0;
+        padding: 0;
+    }
+
+    .price-item__item {
+        @include adaptiv-font(16, 13);
+        line-height: 26px;
+        color: $mainColor;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .item-price__dot {
+            flex: 1 1 auto;
+            display: flex;
+            margin: 0 5px;
+            height: 100%;
+
+            .item-price__dotted {
+                border-bottom: 2px dotted black;
+                flex: 1 1 auto;
+            }
+        }
+
+        .item-price__coast {
+            color: $black;
+        }
+    }
+
+    .price-item__button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 200px;
+        align-self: center;
+        height: 38px;
+        margin-top: 20px;
+        background-color: $mainColor;
+        border: 1px solid $mainColor;
+        border-radius: 50px;
+        font-family: "Arial";
+        font-weight: 700;
+        text-align: center;
+
+        .price-item__link {
+            color: $white;
+        }
+
+        &:hover {
+            background-color: $backgroundColorWhite;
+
+            .price-item__link {
+                color: $mainColor;
+            }
+        }
+    }
+}
+
+@media ($mediaMD) {
+    #section_price {
+        border-radius: 0px 100px;
+
+        .price-item {
+            padding: 20px 10px;
+        }
+
+        .price-item:hover {
+            transform: none;
+        }
+    }
+}

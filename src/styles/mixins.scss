@@ -1,0 +1,75 @@
+$maxWidth: 1440; // Максимальный размер макета
+
+// Миксин для адаптивного шрифта
+// На входе размер шрифта для ПК и мобильной версии
+@mixin adaptiv-font($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $addMobSize: $addSize + $addSize * 0.7;
+  @media (max-width: 767px) {
+    font-size: calc(
+      #{$mobSize + px} + #{$addMobSize} * ((100vw - 320px) / #{$maxWidth})
+    );
+  }
+  @media (min-width: 767px) {
+    font-size: calc(#{$mobSize + px} + #{$addSize} * (100vw / #{$maxWidth}));
+  }
+}
+
+@mixin adaptiv-btn($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $addMobSize: $addSize + $addSize * 0.7;
+  @media (max-width: 767px) {
+    width: calc(
+      #{$mobSize + px} + #{$addMobSize} * ((100vw - 320px) / #{$maxWidth})
+    );
+  }
+  @media (min-width: 767px) {
+    width: calc(#{$mobSize + px} + #{$addSize} * (100vw / #{$maxWidth}));
+  }
+}
+
+@mixin adaptiv-bgImg($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $addMobSize: $addSize + $addSize * 0.7;
+  @media (max-width: 767px) {
+    width: calc(
+      #{$mobSize + px} + #{$addMobSize} * ((100vw - 320px) / #{$maxWidth})
+    );
+  }
+  @media (min-width: 767px) {
+    width: calc(#{$mobSize + px} + #{$addSize} * (100vw / #{$maxWidth}));
+  }
+}
+
+@mixin adaptiv-bgColorTop($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  border-top-right-radius: calc(
+    #{$mobSize + px} + #{$addSize} * (100vw / 2560)
+  );
+}
+
+@mixin adaptiv-bgColorBottom($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  border-bottom-left-radius: calc(
+    #{$mobSize + px} + #{$addSize} * (100vw / 2560)
+  );
+}
+
+@mixin adaptiv-bgColorTopLeft($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  border-top-left-radius: calc(#{$mobSize + px} + #{$addSize} * (100vw / 2560));
+}
+
+@mixin adaptiv-bgColorBottomRight($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  border-bottom-right-radius: calc(
+    #{$mobSize + px} + #{$addSize} * (100vw / 2560)
+  );
+}
+
+@mixin adaptiv-bgColorBottomHeader($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  border-bottom-right-radius: calc(
+    #{$mobSize + px} + #{$addSize} * (100vw / #{$maxWidth})
+  );
+}

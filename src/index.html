@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="apple-touch-icon" sizes="180x180" href="./img/icons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./img/icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./img/icons/favicon-16x16.png">
+        <link rel="manifest" href="./img/icons/site.webmanifest">
+        <link rel="mask-icon" href="./img/icons/safari-pinned-tab.svg" color="#75492b">
+        <meta name="msapplication-TileColor" content="#f7e6df">
+        <meta name="theme-color" content="#f7e6df">
+        <link rel="stylesheet" href="./css/style.min.css">
+        <title>Студия Элина</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header class="header" id="section_header">
+                <nav class="header__nav" id="header__nav">
+                    <div class="header__wrapper">
+                        <div class="header__logo">
+                            <a href="#top" class="header__logo__link">
+                                <img
+                                    src="./img/logo.webp"
+                                    alt="logo"
+                                    class="header__logo__img"></a>
+                        </div>
+                        <div class="header__menu" id="header__menu">
+                            <ul class="header__items">
+                                <li class="header__item">
+                                    <a
+                                        href="#"
+                                        data-goto="#section_header"
+                                        class="header__link">
+                                        Главная</a>
+                                </li>
+                                <li class="header__item">
+                                    <a
+                                        href="#"
+                                        data-goto="#section_about"
+                                        class="header__link">О нас</a>
+                                </li>
+                                <li class="header__item">
+                                    <a
+                                        href="#"
+                                        data-goto="#section_price"
+                                        class="header__link">Прайс лист</a>
+                                </li>
+                                <li class="header__item">
+                                    <a
+                                        href="#"
+                                        data-goto="#section_gallery"
+                                        class="header__link">Галерея</a>
+                                </li>
+                                <li class="header__item">
+                                    <a
+                                        href="#"
+                                        data-goto="#section_reviews"
+                                        class="header__link">Отзывы</a>
+                                </li>
+                                <li class="header__item">
+                                    <a
+                                        href="#"
+                                        data-goto="#section_contact"
+                                        class="header__link">Контакты</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="header__burger" id="header__burger">
+                            <span class="header__burger__span"></span>
+                        </div>
+                    </div>
+                </nav>
+
+                <div class="header__image">
+                    <span class="header__image__span">&nbsp;</span>
+                </div>
+                <div class="header__title">
+                    <h1 class="header__title__text">Элина</h1>
+                    <p class="header__text">студия красоты</p>
+                    <div class="header__send">
+                        <div class="header__sending"></div>
+                        <svg class="header__sending__img">
+                            <use xlink:href="img/sprite.svg#tg"></use>
+                        </svg>
+                        <span class="header__send__span"><a class="header__send__link" href="https://dikidi.ru/#widget=115478">Записаться</a></span>
+                    </div>
+                </div>
+            </header>
+            <section class="section" id="section_about">
+                <img
+                    src="./img/monstera.webp"
+                    class="section__bg-img"
+                    alt="монстера"
+                >
+                <div class="section__wrapper">
+                    <h2 class="section__title">Элина</h2>
+                    <h3 class="section__subtitle">Студия красоты</h3>
+                    <div class="section__content section__content_about">
+                        <div class="section__content-wrapper" id="about__image">
+                            <img
+                                src="./img/salon.webp"
+                                alt="фотография салона"
+                                class="section__content-image"
+                            >
+                        </div>
+                        <div class="section__content-text" id="about__text">
+                            <p class="section__content-content">
+                                Салон красоты «Элина», предлагает все виды
+                                парикмахерских услуг:
+                            </p>
+                            <ul class="section__content-list">
+                                <li class="section__content-item">
+                                    Окрашивание волос любой сложности
+                                </li>
+                                <li class="section__content-item">
+                                    Стрижки, укладки, причёски
+                                </li>
+                                <li class="section__content-item">
+                                    Прикорневой объём волос
+                                </li>
+                                <li class="section__content-item">
+                                    Полировка волос
+                                </li>
+                                <li class="section__content-item">
+                                    Ботокс для волос
+                                </li>
+                                <li class="section__content-item">
+                                    Нанопластика волос
+                                </li>
+                                <li class="section__content-item">
+                                    Кератиновое выпрямление
+                                </li>
+                                <li class="section__content-item">
+                                    Все виды маникюра и педикюра
+                                </li>
+                            </ul>
+                            <p class="section__content-content">
+                                Будем рады видеть Вас в числе своих клиентов.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="section__content section__content_about">
+                        <div class="section__content-promotion">
+                            <h4 class="section__content-title">Требуются модели</h4>
+                            <p class="section__content-promotext">
+                                Нужны модели на женские и мужские стрижки, на окрашивание (в один тон, мелирование, сложное), 
+                                кератиновое выпрямление, ботокс, нанопластику, прикорневой объём.
+                            </p>
+                            <div class="section__content-send open-modal" id="open-modal">
+                                <div class="section__content-sending"></div>
+                                <svg class="section__content-img">
+                                    <use xlink:href="img/sprite.svg#tg"></use>
+                                </svg>
+                                <span class="section__content-span">Записаться</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section" id="section_price">
+                <div class="section__wrapper">
+                    <h2 class="section__title">Прайс лист</h2>
+                    <h3 class="section__subtitle">На наши услуги</h3>
+                    <div class="section__content section__content_price">
+                        <div class="price-item">
+                            <div class="price-item__wrapper">
+                                <h4 class="price-item__title">
+                                    Стрижки женские и мужские
+                                </h4>
+                                <ul class="price-item__lists">
+                                    <li class="price-item__item item-price">
+                                        <div class="item-price__name">
+                                            Женские стрижки
+                                        </div>
+                                        <div class="item-price__dot">
+                                            <div
+                                                class="item-price__dotted"
+                                            ></div>
+                                        </div>
+                                        <div class="item-price__coast">
+                                            500–700 ₽
+                                        </div>
+                                    </li>
+                                    <li class="price-item__item item-price">
+                                        <div class="item-price__name">
+                                            Мужские стрижки
+                                        </div>
+                                        <div class="item-price__dot">
+                                            <div
+                                                class="item-price__dotted"
+                                            ></div>
+                                        </div>
+                                        <div class="item-price__coast">
+                                            350–600 ₽
+                                        </div>
+                                    </li>
+                                    <li class="price-item__item item-price">
+                                        <div class="item-price__name">
+                                            Детские стрижки
+                                        </div>
+                                        <div class="item-price__dot">
+                                            <div
+                                                class="item-price__dotted"
+                                            ></div>
+                                        </div>
+                                        <div class="item-price__coast">
+                                            400–500 ₽
+                                        </div>
+                                    </li>
+                                    <li class="price-item__item item-price">
+                                        <div class="item-price__name">
+                                            Стрижка бороды
+                                        </div>
+                                        <div class="item-price__dot">
+                                            <div
+                                                class="item-price__dotted"
+                                            ></div>
+                                        </div>
+                                        <div class="item-price__coast">
+                                            от 400 ₽
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="price-item__button">
+                                <a class="price-item__link" href="https://dikidi.ru/#widget=115478">Записаться</a>
+                            </div>
+                        </div>
+                        <div class="price-item">
+                            <div class="price-item__wrapper">
+                                <h4 class="price-item__title">
+                                    Причёски и укладки
+                                </h4>
+                                <ul class="price-item__lists">
+                                    <li class="price-item__item item-price">
+                                        <div class="item-price__name">
+                                            Причёски
+                                        </div>
+                                        <div class="item-price__dot">
+                                            <div
+                                                class="item-price__dotted"
+                                            ></div>
+                                        </div>
+                                        <div class="item-price__coast">
+                                            1500–2500 ₽
+                                        </div>
+                                    </li>
+                                    <li class="price-item__item item-price">
+                                        <div class="item-price__name">
+                                            Укладки
+                                        </div>
+                                        <div class="item-price__dot">
+                                            <div
+                                                class="item-price__dotted"
+                                            ></div>
+                                        </div>
+                                        <div class="item-price__coast">
+                                            от 600 ₽
+                                        </div>
+                                    </li>
+                                    <li class="price-item__item item-price">
+                                        <div class="item-price__name">
+                                            Выпрямление утюжком
+                                        </div>
+                                        <div class="item-price__dot">
+                                            <div
+                                                class="item-price__dotted"
+                                            ></div>
+                                        </div>
+                                        <div class="item-price__coast">
+                                            от 600 ₽
+                                        </div>
+                                    </li>
+                                    <li class="price-item__item item-price">
+                                        <div class="item-price__name">
+                                            Сушка с оформлением
+                                        </div>
+                                        <div class="item-price__dot">
+                                            <div
+                                                class="item-price__dotted"
+                                            ></div>
+                                        </div>
+                                        <div class="item-price__coast">
+                                            от 400 ₽
+                                        </div>
+                                    </li>
+                                    <li class="price-item__item item-price">
+                                        <div class="item-price__name">
+                                            Мытьё + сушка
+                                        </div>
+                                        <div class="item-price__dot">
+                                            <div
+                                                class="item-price__dotted"
+                                            ></div>
+                                        </div>
+                                        <div class="item-price__coast">
+                                            300 ₽
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="price-item__button">
+                                <a class="price-item__link" href="https://dikidi.ru/#widget=115478">Записаться</a>
+                            </div>
+                        </div>
+                        <div class="price-item">
+                            <div class="price-item__wrapper">
+                                <h4 class="price-item__title">Окрашивание</h4>
+                                <ul class="price-item__lists">
+                                    <li class="price-item__item item-price">
+                                        <div class="item-price__name">
+                                            Окрашивание
+                                        </div>
+                                        <div class="item-price__dot">
+                                            <div
+                                                class="item-price__dotted"
+                                            ></div>
+                                        </div>
+                                        <div class="item-price__coast">
+                                            700–3000 ₽
+                                        </div>
+                                    </li>
+                                    <li class="price-item__item item-price">
+                                        <div class="item-price__name">
+                                            Обесцвечивание
+                                        </div>
+                                        <div class="item-price__dot">
+                                            <div
+                                                class="item-price__dotted"
+                                            ></div>
+                                        </div>
+                                        <div class="item-price__coast">
+                                            от 1200 ₽
+                                        </div>
+                                    </li>
+                                    <li class="price-item__item item-price">
+                                        <div class="item-price__name">
+                                            Милирование
+                                        </div>
+                                        <div class="item-price__dot">
+                                            <div
+                                                class="item-price__dotted"
+                                            ></div>
+                                        </div>
+                                        <div class="item-price__coast">
+                                            1200–3000 ₽
+                                        </div>
+                                    </li>
+                                    <li class="price-item__item item-price">
+                                        <div class="item-price__name">
+                                            Тонирование
+                                        </div>
+                                        <div class="item-price__dot">
+                                            <div
+                                                class="item-price__dotted"
+                                            ></div>
+                                        </div>
+                                        <div class="item-price__coast">
+                                            от 1500 ₽
+                                        </div>
+                                    </li>
+                                    <li class="price-item__item item-price">
+                                        <div class="item-price__name">
+                                            Колорирование
+                                        </div>
+                                        <div class="item-price__dot">
+                                            <div
+                                                class="item-price__dotted"
+                                            ></div>
+                                        </div>
+                                        <div class="item-price__coast">
+                                            от 1500 ₽
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="price-item__button">
+                                <a class="price-item__link" href="https://dikidi.ru/#widget=115478">Записаться</a>
+                            </div>
+                        </div>
+                        <div class="price-item">
+                            <div class="price-item__wrapper">
+                                <h4 class="price-item__title">
+                                    Процедуры для волос
+                                </h4>
+                                <ul class="price-item__lists">
+                                    <li class="price-item__item item-price">
+                                        <div class="item-price__name">
+                                            Прикорневой объём
+                                        </div>
+                                        <div class="item-price__dot">
+                                            <div
+                                                class="item-price__dotted"
+                                            ></div>
+                                        </div>
+                                        <div class="item-price__coast">
+                                            от 1500 ₽
+                                        </div>
+                                    </li>
+                                    <li class="price-item__item item-price">
+                                        <div class="item-price__name">
+                                            Кератиновое выпрямление
+                                        </div>
+                                        <div class="item-price__dot">
+                                            <div
+                                                class="item-price__dotted"
+                                            ></div>
+                                        </div>
+                                        <div class="item-price__coast">
+                                            от 3000 ₽
+                                        </div>
+                                    </li>
+                                    <li class="price-item__item item-price">
+                                        <div class="item-price__name">
+                                            Восстановление волос
+                                        </div>
+                                        <div class="item-price__dot">
+                                            <div
+                                                class="item-price__dotted"
+                                            ></div>
+                                        </div>
+                                        <div class="item-price__coast">
+                                            от 1200 ₽
+                                        </div>
+                                    </li>
+                                    <li class="price-item__item item-price">
+                                        <div class="item-price__name">
+                                            Холодная реконструкция
+                                        </div>
+                                        <div class="item-price__dot">
+                                            <div
+                                                class="item-price__dotted"
+                                            ></div>
+                                        </div>
+                                        <div class="item-price__coast">
+                                            от 1000 ₽
+                                        </div>
+                                    </li>
+                                    <li class="price-item__item item-price">
+                                        <div class="item-price__name">
+                                            Ботокс
+                                        </div>
+                                        <div class="item-price__dot">
+                                            <div
+                                                class="item-price__dotted"
+                                            ></div>
+                                        </div>
+                                        <div class="item-price__coast">
+                                            от 2500 ₽
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="price-item__button">
+                                <a class="price-item__link" href="https://dikidi.ru/#widget=115478">Записаться</a>
+                            </div>
+                        </div>
+                        <div class="price-item">
+                            <div class="price-item__wrapper">
+                                <h4 class="price-item__title">
+                                    Ногтевой сервис
+                                </h4>
+                                <ul class="price-item__lists">
+                                    <li class="price-item__item item-price">
+                                        <div class="item-price__name">
+                                            Маникюр
+                                        </div>
+                                        <div class="item-price__dot">
+                                            <div
+                                                class="item-price__dotted"
+                                            ></div>
+                                        </div>
+                                        <div class="item-price__coast">
+                                            от 400 ₽
+                                        </div>
+                                    </li>
+                                    <li class="price-item__item item-price">
+                                        <div class="item-price__name">
+                                            Наращивание
+                                        </div>
+                                        <div class="item-price__dot">
+                                            <div
+                                                class="item-price__dotted"
+                                            ></div>
+                                        </div>
+                                        <div class="item-price__coast">
+                                            от 1500 ₽
+                                        </div>
+                                    </li>
+                                    <li class="price-item__item item-price">
+                                        <div class="item-price__name">
+                                            Педикюр
+                                        </div>
+                                        <div class="item-price__dot">
+                                            <div
+                                                class="item-price__dotted"
+                                            ></div>
+                                        </div>
+                                        <div class="item-price__coast">
+                                            от 1000 ₽
+                                        </div>
+                                    </li>
+                                    <li class="price-item__item item-price">
+                                        <div class="item-price__name">
+                                            Парафинотерапия
+                                        </div>
+                                        <div class="item-price__dot">
+                                            <div
+                                                class="item-price__dotted"
+                                            ></div>
+                                        </div>
+                                        <div class="item-price__coast">
+                                            200 ₽
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="price-item__button">
+                                <a class="price-item__link" href="https://dikidi.ru/#widget=115478">Записаться</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section" id="section_gallery">
+                <div class="section__wrapper">
+                    <h2 class="section__title">Галерея</h2>
+                    <h3 class="section__subtitle">Наших работ</h3>
+                    <div class="section__content section__content_gallery">
+                        <img
+                            class="section__content-img"
+                            src="./img/gallery/1.jpg"
+                            alt="примеры работ"
+                        >
+                        <img
+                            class="section__content-img"
+                            src="./img/gallery/2.jpg"
+                            alt="примеры работ"
+                        >
+                        <img
+                            class="section__content-img"
+                            src="./img/gallery/3.jpg"
+                            alt="примеры работ"
+                        >
+                        <img
+                            class="section__content-img"
+                            src="./img/gallery/4.jpg"
+                            alt="примеры работ"
+                        >
+                        <img
+                            class="section__content-img"
+                            src="./img/gallery/5.jpg"
+                            alt="примеры работ"
+                        >
+                        <img
+                            class="section__content-img"
+                            src="./img/gallery/6.jpg"
+                            alt="примеры работ"
+                        >
+                        <img
+                            class="section__content-img"
+                            src="./img/gallery/7.jpg"
+                            alt="примеры работ"
+                        >
+                        <img
+                            class="section__content-img"
+                            src="./img/gallery/8.jpg"
+                            alt="примеры работ"
+                        >
+                    </div>
+                </div>
+            </section>
+            <section class="section" id="section_reviews">
+                <div class="section__wrapper">
+                    <h2 class="section__title">Отзывы о нас</h2>
+                    <h3 class="section__subtitle">И наших услугах</h3>
+                    <div class="section__content section__content_reviews">
+                        <div class="reviews-item">
+                            <div class="reviews-item__wrapper">
+                                <div class="reviews-item__content">
+                                    <div class="reviews-item__header">
+                                        <img
+                                            class="reviews-item__img"
+                                            src="./img/reviews/user_1.webp"
+                                            alt="Отзывы"
+                                        >
+                                        <h4 class="reviews-item__title">
+                                            Нелли Лобанова
+                                        </h4>
+                                    </div>
+                                    <p class="reviews-item__text">
+                                        Была первый раз в этом салоне Элина.
+                                        Катенька просто ВОЛШЕБНИЦА 😘Я в таком
+                                        восторге нахожусь, даже не передать
+                                        словами🔥Благодарна Мастеру за
+                                        КЕРАТИНОВОЕ ВЫПРЯМЛЕНИЕ
+                                        ВОЛОС🔥🔥🔥волосы шёлковые,
+                                        блестят,красивые.Я долго искала хорошего
+                                        мастера и вот нашлась Катенька 😍 Я
+                                        теперь постоянный ваш клиент .Спасибо
+                                        вам за то что вы нас делаете
+                                        Красивыми🔥👍❤
+                                    </p>
+                                </div>
+                                <p class="reviews-item__data">
+                                    4 фев 2023 в 19:01
+                                </p>
+                            </div>
+                        </div>
+                        <div class="reviews-item">
+                            <div class="reviews-item__wrapper">
+                                <div class="reviews-item__content">
+                                    <div class="reviews-item__header">
+                                        <img
+                                            class="reviews-item__img"
+                                            src="./img/reviews/user_2.webp"
+                                            alt="Отзывы"
+                                        >
+                                        <h4 class="reviews-item__title">
+                                            Татьяна Скворцова
+                                        </h4>
+                                    </div>
+                                    <p class="reviews-item__text">
+                                        В первые посетила салон Элина. Очень
+                                        понравилось. Доброжелательные девочки,
+                                        процедура стрижки и окрашивания -
+                                        процесс не быстрый, но для меня это
+                                        время отдыха. Огромная
+                                        благодарность💋💋💋
+                                    </p>
+                                </div>
+                                <p class="reviews-item__data">
+                                    9 янв 2023 в 16:44
+                                </p>
+                            </div>
+                        </div>
+                        <div class="reviews-item">
+                            <div class="reviews-item__wrapper">
+                                <div class="reviews-item__content">
+                                    <div class="reviews-item__header">
+                                        <img
+                                            class="reviews-item__img"
+                                            src="./img/reviews/user_3.webp"
+                                            alt="Отзывы"
+                                        >
+                                        <h4 class="reviews-item__title">
+                                            Анастасия Сороковик
+                                        </h4>
+                                    </div>
+                                    <p class="reviews-item__text">
+                                        Была в парикмахерской Элина... очень
+                                        благодарна мастеру за прекрасное
+                                        обслуживание.... очень все понравилось😉
+                                    </p>
+                                </div>
+                                <p class="reviews-item__data">
+                                    12 авг 2022 в 11:52
+                                </p>
+                            </div>
+                        </div>
+                        <div class="reviews-item">
+                            <div class="reviews-item__wrapper">
+                                <div class="reviews-item__content">
+                                    <div class="reviews-item__header">
+                                        <img
+                                            class="reviews-item__img"
+                                            src="./img/reviews/user_4.webp"
+                                            alt="Отзывы"
+                                        >
+                                        <h4 class="reviews-item__title">
+                                            Марина Карсакова
+                                        </h4>
+                                    </div>
+                                    <p class="reviews-item__text">
+                                        Отличный специалист , посоветовала и
+                                        цвет и стрижку , подошло идеально
+                                        ❤😍дала рекомендации по уходу за
+                                        волосами. Очень понравилось. Я нашла
+                                        своего мастера😍. Огромное спасибо💕
+                                    </p>
+                                </div>
+                                <p class="reviews-item__data">
+                                    12 авг 2022 в 11:48
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section__text">
+                        <p class="section__footer">
+                            Больше отзывов смотрите в нашем сообществе
+                            <a
+                                class="section__link"
+                                id="reviews__link"
+                                href="https://vk.com/topic-215292078_48982145?post=22"
+                                target="_blank"
+                                >ВКонтакте</a
+                            >
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <footer class="footer" id="section_contact">
+                <div class="footer__items">
+                    <div class="footer__item footer__social">
+                        <img
+                            src="./img/logo.webp"
+                            alt="логотип"
+                            class="footer__item-img"
+                        >
+                        <ul class="footer__item-list">
+                            <li class="footer__item-item">
+                                <a
+                                    class="footer__item-link"
+                                    href="https://vk.com/elina.salon"
+                                    target="_blank"
+                                >
+                                    <svg class="footer__item-icon">
+                                        <use
+                                            xlink:href="img/sprite.svg#vk"
+                                        ></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="footer__item-item">
+                                <a
+                                    class="footer__item-link"
+                                    href="http://t.me/+79612197666"
+                                    target="_blank"
+                                >
+                                    <svg class="footer__item-icon">
+                                        <use
+                                            xlink:href="img/sprite.svg#tg"
+                                        ></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="footer__item-item">
+                                <a
+                                    class="footer__item-link"
+                                    href="http://wa.me/79612197666"
+                                    target="_blank"
+                                >
+                                    <svg class="footer__item-icon">
+                                        <use
+                                            xlink:href="img/sprite.svg#wa"
+                                        ></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__item footer__third">
+                        <h4 class="footer__title">Наш адрес</h4>
+                        <p class="footer__text">г. Новосибирск</p>
+                        <p class="footer__text">ул. Блюхера, дом 54</p>
+                    </div>
+                    <div class="footer__item footer__fourth">
+                        <h4 class="footer__title">График работы</h4>
+                        <p class="footer__text">Ежедневно</p>
+                        <p class="footer__text">с 10:00 до 20:00</p>
+                    </div>
+                    <div class="footer__item footer__second">
+                        <h4 class="footer__title">Контакты</h4>
+                        <ul class="footer__contacts">
+                            <li class="footer__contacts-item">
+                                <a
+                                    class="footer__contacts-link"
+                                    href="tel:+79612197666"
+                                >
+                                    <svg
+                                        class="footer__contacts-svg"
+                                        id="svgPhone"
+                                    >
+                                        <use
+                                            xlink:href="img/sprite.svg#phone"
+                                        ></use>
+                                    </svg>
+                                    8 961 219 76 66</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <div class="modal" id="modal__window">
+            <div class="modal__close" id="closeBtn">X</div>
+            <h3 class="modal__title">Оставить заявку</h3>
+            <div class="modal__text">Оставьте заявку и мы обязательно с Вами свяжимся для согласования даты и времени</div>
+            <form class="modal__form telegram-form">
+                <input type="text" class="modal__name" name="name" placeholder="Имя" autocomplete="off" />
+                <input type="tel" class="modal__phone" name="phone" placeholder="Телефон" autocomplete="off" />
+                <button type="submit" class="modal__btn" id="submitBtn">отправить</button>
+            </form>
+        </div>
+        <div class="modal-overlay" id="modal__overlay"></div>
+        <script src="https://dikidi.ru/assets/js/widget_record/widget2.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="js/script.min.js"></script>
+    </body>
+</html>
